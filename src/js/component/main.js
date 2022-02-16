@@ -44,8 +44,8 @@ class App extends Component {
 	}
 	render() {
 		return (
-			<div className="App">
-				<div>
+			<div className="container">
+				<div className="content">
 					Add item...
 					<br />
 					<input
@@ -74,6 +74,7 @@ class App extends Component {
 						})}
 					</ul>
 				</div>
+				<div class="flap"></div>
 			</div>
 		);
 	}
