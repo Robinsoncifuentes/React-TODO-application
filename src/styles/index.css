@@ -1,74 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap');
+html, body {
+	background:#f7f1f1;
+	font-size:1.1rem;
+	font-family:'Quicksand', sans-serif;
+	height:100%;
+}
+li{
+  display:flex;
+	margin:0 -3rem 4px;
+	padding:1.1rem 3rem;
+	justify-content:space-between;
+	align-items:center;
+	background:rgba(255,255,255,0.1);
 
-body {
-  background: #f2f2f2;
+}
+.container{
+  display: flex;
+  margin-top: 100px;
+  padding: auto;
+  justify-content: center;
+  margin:4rem auto;
+	padding:2rem 3rem 3rem;
+	max-width:500px;
+  background: #7474BF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+	color:#FFF;
+	box-shadow:-20px -20px 0px 0px rgba(100,100,100,.1);
+  animation-duration: 2s;
 }
 
-.container  {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 400px;
-  width: 600px;
-  background: #f2f2f2;
-  overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 0 20px 8px #d0d0d0;
+#delete{
+  display: none;
 }
 
-.content {
-  position: absolute;
-  top: 50%;
-  transform: translatey(-50%);
-  text-align: justify;
-  color: black;
-  padding: 40px;
-  font-family: 'Merriweather', serif;
+    
+#delete:hover {
+  display: block;
+  color: red;
+}
+.container{
+  animation-duration: 3s;
+  animation-name: container;
 }
 
-h1 {
-  font-weight: 900;
-  text-align: center;
-}
+@keyframes container {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
 
-h3 {
-  font-weight: 300;
-}
-
-.flap {
-  width: 100%;
-  height: 100%;
-}
-
-.flap::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 50%;
-  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
-  background-position: 100px;
-  background-repeat: no-repeat;
-  transition: 1s;
-}
-
-.flap::after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 50%;
-  right: 0;
-  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
-  background-position: -200px;
-  background-repeat: no-repeat;
-  transition: 1s;
-}
-
-.container:hover .flap::after {
-  transform: translatex(300px);
-}
-
-.container:hover .flap::before{
-  transform: translatex(-300px);
+  to {
+    margin-left: 32%;
+    width: 100%;
+  }
 }

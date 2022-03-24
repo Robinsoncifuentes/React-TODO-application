@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import { Component } from "react/cjs/react.production.min";
 
 class App extends Component {
@@ -46,9 +45,10 @@ class App extends Component {
 		return (
 			<div className="container">
 				<div className="content">
-					Add item...
+					<h1>DailyTasks</h1>
 					<br />
 					<input
+						id="inp"
 						type="text"
 						placeholder="Type item here..."
 						value={this.state.newItem}
@@ -64,6 +64,7 @@ class App extends Component {
 								<li key={item.id}>
 									{item.value}
 									<button
+										id="delete"
 										onClick={() =>
 											this.deleteItem(item.id)
 										}>
